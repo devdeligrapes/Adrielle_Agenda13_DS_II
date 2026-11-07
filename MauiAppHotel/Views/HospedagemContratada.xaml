@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.HospedagemContratada"
+             Title="Hospedagem Contratada"
+             BackgroundColor="{StaticResource Color4}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+
+            <Label Text="Reserva Confirmada ✔"
+                   FontFamily="Kalam"
+                   FontSize="34"
+                   TextColor="{StaticResource TextoEscuro}" />
+
+            <Frame Padding="15" BorderColor="{StaticResource Secondary}">
+                <VerticalStackLayout Spacing="8">
+
+                    <Label Text="Resumo da Estadia"
+                           TextTransform="Uppercase"
+                           FontSize="Subtitle"
+                           TextColor="{StaticResource TextoEscuro}" />
+
+                    <Grid ColumnDefinitions="*, 2*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="6">
+                        <Label Grid.Row="0" Text="Suíte:" HorizontalTextAlignment="Start" />
+                        <Label Grid.Row="0" Grid.Column="1" x:Name="lbl_quarto" HorizontalTextAlignment="End" TextColor="{StaticResource TextoEscuro}" />
+
+                        <Label Grid.Row="1" Text="Adultos:" HorizontalTextAlignment="Start" />
+                        <Label Grid.Row="1" Grid.Column="1" x:Name="lbl_adultos" HorizontalTextAlignment="End" TextColor="{StaticResource TextoEscuro}" />
+
+                        <Label Grid.Row="2" Text="Crianças:" HorizontalTextAlignment="Start" />
+                        <Label Grid.Row="2" Grid.Column="1" x:Name="lbl_criancas" HorizontalTextAlignment="End" TextColor="{StaticResource TextoEscuro}" />
+
+                        <Label Grid.Row="3" Text="Check-in:" HorizontalTextAlignment="Start" />
+                        <Label Grid.Row="3" Grid.Column="1" x:Name="lbl_checkin" HorizontalTextAlignment="End" TextColor="{StaticResource TextoEscuro}" />
+
+                        <Label Grid.Row="4" Text="Check-out:" HorizontalTextAlignment="Start" />
+                        <Label Grid.Row="4" Grid.Column="1" x:Name="lbl_checkout" HorizontalTextAlignment="End" TextColor="{StaticResource TextoEscuro}" />
+
+                        <Label Grid.Row="5" Text="Noites:" HorizontalTextAlignment="Start" />
+                        <Label Grid.Row="5" Grid.Column="1" x:Name="lbl_estadia" HorizontalTextAlignment="End" TextColor="{StaticResource TextoEscuro}" />
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Border BackgroundColor="{StaticResource Primary}" StrokeThickness="0" Padding="15">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="Valor da diária" FontSize="13" TextColor="{StaticResource TextoEscuro}" />
+                    <Label x:Name="lbl_diaria" FontSize="20" TextColor="{StaticResource TextoEscuro}" />
+                    <Label Text="Valor total" FontSize="13" TextColor="{StaticResource TextoEscuro}" Margin="0,8,0,0" />
+                    <Label x:Name="lbl_total" FontFamily="Kalam" FontSize="36" TextColor="{StaticResource TextoEscuro}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="Nova Reserva"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="{StaticResource TextoEscuro}"
+                    Clicked="OnNovaReservaClicked" />
+
+            <Button Text="ℹ️ Sobre"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource TextoEscuro}"
+                    BorderColor="{StaticResource Primary}"
+                    BorderWidth="1"
+                    Clicked="OnSobreClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

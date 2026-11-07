@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             BackgroundColor="{StaticResource Color4}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="12">
+
+            <Border BackgroundColor="{StaticResource Primary}" StrokeThickness="0" Padding="10,24">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="16" />
+                </Border.StrokeShape>
+                <VerticalStackLayout Spacing="4">
+                    <Label Text="🏨" FontSize="48" />
+                    <Label Text="Hotel Maui"
+                           FontFamily="Kalam"
+                           FontSize="38"
+                           TextColor="{StaticResource TextoEscuro}" />
+                    <Label x:Name="lbl_versao"
+                           FontSize="13"
+                           TextColor="{StaticResource TextoEscuro}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Frame Padding="15" BorderColor="{StaticResource Secondary}">
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="Sobre o aplicativo"
+                           TextTransform="Uppercase"
+                           FontSize="Subtitle"
+                           TextColor="{StaticResource TextoEscuro}" />
+
+                    <Label Text="Aplicativo para calcular o valor da hospedagem: escolha a suíte, informe hóspedes e período da estadia e veja o resumo da reserva."
+                           HorizontalTextAlignment="Center" />
+
+                    <BoxView HeightRequest="1" Color="{StaticResource Gray200}" />
+
+                    <Label Text="Desenvolvedor" FontSize="12" TextColor="{StaticResource Gray500}" />
+                    <Label x:Name="lbl_desenvolvedor" FontSize="20" TextColor="{StaticResource TextoEscuro}" />
+
+                    <Label Text="Ano de desenvolvimento" FontSize="12" TextColor="{StaticResource Gray500}" />
+                    <Label x:Name="lbl_ano" FontSize="20" TextColor="{StaticResource TextoEscuro}" />
+
+                    <Label Text="Tecnologia" FontSize="12" TextColor="{StaticResource Gray500}" />
+                    <Label Text=".NET MAUI (C# e XAML)" FontSize="20" TextColor="{StaticResource TextoEscuro}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Voltar"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="{StaticResource TextoEscuro}"
+                    Clicked="OnVoltarClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
